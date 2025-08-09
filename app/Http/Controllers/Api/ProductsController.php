@@ -89,9 +89,15 @@ public function store(Request $request)
     $data['category_id'] = $category->id;
     unset($data['category_type']);
 
+    // if ($request->hasFile('banner_img')) {
+    //     $data['banner_img'] = $request->file('banner_img')->store('product_image', 'public');
+    // }
     if ($request->hasFile('banner_img')) {
-        $data['banner_img'] = $request->file('banner_img')->store('product_image', 'public');
-    }
+    $path = $request->file('banner_img')->store('product_image', 'public');
+    Log::info('Image stored at: ' . $path);
+    $data['banner_img'] = $path;
+}
+
 
     $product = Product::create($data);
 
