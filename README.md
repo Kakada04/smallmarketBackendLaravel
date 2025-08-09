@@ -1,3 +1,4 @@
+ 
 <p align="center">
   <img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="300" alt="Laravel Logo">
 </p>
@@ -47,3 +48,5 @@ cp .env.example .env
 php artisan key:generate
 php artisan migrate
 php artisan serve --host=0.0.0.0 --port=8080
+
+
